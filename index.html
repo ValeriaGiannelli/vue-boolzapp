@@ -157,20 +157,8 @@
                 <div class="chat-container">
 
                     <!-- messaggio utente -->
-                    <div class="message user-message" v-for="(text, index) in contacts[activeContact].messages" :key="index" @click="whatIDo">
+                    <div class="message" :class="text.status === 'sent' ? 'user-message' : 'contact-message'" v-for="(text, index) in contacts[activeContact].messages" :key="index" >
                         <span class="text">{{text.message}}</span>
-                        <span class="time">12:00</span>
-                    </div>
-
-                    <!-- messaggio utente -->
-                    <div class="message user-message">
-                        <span class="text">Inserire testo della persona</span>
-                        <span class="time">12:00</span>
-                    </div>
-
-                    <!-- messaggio contatto -->
-                    <div class="message contact-message">
-                        <span>Inserire testo del contatto</span>
                         <span class="time">12:00</span>
                     </div>
                 
