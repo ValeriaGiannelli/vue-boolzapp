@@ -125,12 +125,12 @@
                     <!-- informazioni contatto da gestire con VUE-->
                     <div class="contact-profile">
                         <div class="immagine-profilo">
-                            <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                            <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
                         </div>
                         
                         <!-- nome e ultimo messaggio inviato gestire con VUE -->
                         <div class="info-contact">
-                            <h3>Nome contatto</h3>
+                            <h3>{{contacts[activeContact].name}}</h3>
                             <span>Ultimo accesso oggi alle 12:00</span>                      
                         </div>
                     </div>

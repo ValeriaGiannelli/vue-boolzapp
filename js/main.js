@@ -9,6 +9,7 @@ createApp ({
                 name: 'Obi-Wan Kenobi',
                 avatar: './img/avatar-icon-6.jpg'
             },
+            activeContact : 0,
 
             contacts: [
                 {
