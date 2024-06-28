@@ -4,3 +4,75 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#app{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* stile container */
+#container{
+    width: 90%;
+    margin: 0 auto;
+    height: calc(100vh - 50px);
+    display: flex;
+
+    /* DEBUG */
+    background-color: aqua;
+
+}
+
+/* contenuti dei contatti */
+.left-box{
+    width: calc(100% / 3);
+    /* DEBUG */
+    height: 100%;
+    border: 1px solid black;
+}
+
+/* barra del profilo */
+.user-profile{
+    height: 70px;
+    background-color: rgb(242, 242, 242);
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+/* sezione notifiche del desktop */
+.desktop-notifications{
+    height: 70px;
+    background-color: cornflowerblue;
+
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+/* sezione barra di ricerca */
+.search-bar{
+    height: 40px;
+    background-color: rgb(242, 242, 242);
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+/* sezione contatti */
+#contacts{
+    height: calc(100vh - 230px);
+    overflow-y: auto;
+}
+
+.contact{
+    height: 85px;
+
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+.right-box{
+    width: calc(100% / 3 *2);
+    /* DEBUG */
+    height: 100%;
+    border: 1px solid black;
+}
+
