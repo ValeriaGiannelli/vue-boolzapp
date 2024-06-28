@@ -29,16 +29,20 @@
         <div class="green-row"></div>
 
         <!-- container della web app -->
-         <div id="container">
+        <div id="container">
 
             <!-- parte sinistra dei contatti e profilo -->
-             <div id="left-box">
+            <div id="left-box">
 
                 <!-- informazioni utente -->
                 <div class="bar-up">
-                    <!-- informazioni profilo -->
+
+                    <!-- informazioni profilo gestire con VUE-->
                     <div class="user-profile">
-                        <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                        <div class="immagine-profilo">
+                            <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                        </div>
+                        
                         <span>Nome Utente</span>
                     </div>
 
@@ -86,7 +90,7 @@
                 <!-- sezione contatti -->
                 <section id="contacts">
 
-                    <!-- singolo contatto -->
+                    <!-- singolo contatto da moltiplicare con VUE-->
                     <div class="single-contact">
 
                         <div class="immagine-profilo">
@@ -97,62 +101,64 @@
                         <!-- nome e ultimo messaggio inviato -->
                         <div class="info-contact">
                             <h3>Nome contatto</h3>
-                            <span>Ultimo messaggio inviato</span>
-                            
+                            <span>Ultimo messaggio inviato</span>                      
                         </div>
 
-                    </div>
-
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                    <div class="single-contact">
-
-                    </div>
-                
+                    </div>                
                 </section>
 
-             </div>
+            </div>
 
-             <!-- parte destra dei messaggi -->
-              <div class="right-box">
+            <!-- parte destra dei messaggi -->
+            <div class="right-box">
 
                 <!-- nome del contatto selezionato -->
-                 <div class="selected-contact">
+                <div class="selected-contact">
 
-                 </div>
+                    <!-- informazioni contatto da gestire con VUE-->
+                    <div class="contact-profile">
+                        <div class="immagine-profilo">
+                            <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                        </div>
+                        
+                        <!-- nome e ultimo messaggio inviato -->
+                        <div class="info-contact">
+                            <h3>Nome contatto</h3>
+                            <span>Ultimo messaggio inviato</span>                      
+                        </div>
+                    </div>
 
-                 <!-- contenuto della chat -->
-                  <div class="chat-container">
-    
-                   
-                  </div>
+                    <!-- icone laterali -->
+                    <div class="icons">
+
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-paperclip"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </a>    
+                        
+                    </div>
+
+                </div>
+
+                
+                <!-- contenuto della chat -->
+                <div class="chat-container">
+
+                
+                </div>
                   
                 <!-- scrittura messaggio -->
                  <div class="text-area">
 
                  </div>
 
-              </div>
-         </div>
+            </div>  
+        </div>
 
     </div>
 
