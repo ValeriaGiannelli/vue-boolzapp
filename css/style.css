@@ -30,11 +30,7 @@ body{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
-
-    /* DEBUG */
-    background-color: aqua;
-
+    transform: translate(-50%, -50%);  
 }
 
 
@@ -43,9 +39,6 @@ body{
 /* contenuti dei contatti */
 #left-box{
     width: calc(100% / 3);
-    /* DEBUG */
-    height: 100%;
-    border: 1px solid black;
 }
 
 /* barra del profilo */
@@ -55,6 +48,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-right: 1px solid gray;
 }
 
 /* sezione immagine e nome utente */
@@ -106,8 +100,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 5px;
-    /* DEBUG */
-    border: 1px solid black;
+    border-right: 1px solid gray;
 }
 
 .search-bar .fa-magnifying-glass{
@@ -128,6 +121,8 @@ body{
 #contacts{
     height: calc(100vh - 230px);
     overflow-y: auto;
+    border-right: 1px solid gray;
+    background-color: white;
 }
 
 /* singolo contatto */
@@ -137,9 +132,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* DEBUG */
-    border: 1px solid black;
+    border-bottom: 1px solid gray;
 }
 
 .img-info{
@@ -178,9 +171,6 @@ body{
 /******* SEZIONE DI DESTRA ******/
 .right-box{
     width: calc(100% / 3 *2);
-    /* DEBUG */
-    height: 100%;
-    border: 1px solid black;
 }
 
 /* utente visualizzato */
@@ -190,9 +180,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* DEBUG */
-    border: 1px solid black;
 }
 
 .selected-contact .immagine-profilo img{
@@ -211,29 +198,63 @@ body{
     overflow-y: auto;
     background-image: url(../img/wp4410721-660620800.jpg);
     padding: 50px 90px;
-
-    /* DEBUG */
-    border: 1px solid black;
 }
 
 /* caratteristiche base dei messaggi */
 .message{
-    padding: 10px;
+    padding: 5px;
+    padding-left: 15px;
     border-radius: 10px;
     width: 250px;
     margin-bottom: 10px;
-
-    /* debug */
-    background-color: white;
-    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
 }
 
+/* caratteristiche messaggi */
+.message .time{
+    font-size: 9px;
+    color: gray;
+    align-self: end;
+}
+
+/* caratteristica messaggio utente */
+.user-message{
+    background-color:#d5f9ba ;
+    margin-left: calc(100% - 250px);
+}
+
+.contact-message{
+    background-color: white;
+}
+
+
+
+/* barra di inserimento del messaggio */
 .text-area{
     height: 70px;
     background-color: rgb(242, 242, 242);
+    display: flex;
+    align-items: center;
+}
 
-    /* DEBUG */
-    border: 1px solid black;
+.text-area a {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-size: 20px;
+}
+
+.text-area input{
+    width: 80%;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+
 }
 
 /***********************************/
