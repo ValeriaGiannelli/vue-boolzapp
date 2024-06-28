@@ -5,11 +5,12 @@ const { createApp } = Vue;
 createApp ({
     data(){
         return {
-            userProfile : {
+            userProfile: {
                 name: 'Obi-Wan Kenobi',
                 avatar: './img/avatar-icon-6.jpg'
             },
-            activeContact : 0,
+            activeContact: 0,
+            userText: '',
 
             contacts: [
                 {
@@ -183,7 +184,19 @@ createApp ({
         },
         whatIDo(){
             console.log(this.contacts[0].messages);
+        },
+        sendMessage(){
+            const newMessage = {
+                date: 'inserire data odierna',
+                message: this.userText, 
+                status: 'sent'
+            };
+
+            this.contacts[this.activeContact].messages.push(newMessage);
+
+            this.userText = '';
         }
+
     },
     mounted(){
 

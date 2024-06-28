@@ -136,6 +136,11 @@ body{
     border-bottom: 1px solid gray;
 }
 
+.single-contact:hover{
+    cursor: pointer;
+    background-color: #ecececb2;
+}
+
 /* contenitore del contatto senza l'ora */
 .img-info{
     display: flex;
