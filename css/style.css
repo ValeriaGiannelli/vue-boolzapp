@@ -27,7 +27,7 @@
 /******* SEZIONE DI SINISTRA ******/
 
 /* contenuti dei contatti */
-.left-box{
+#left-box{
     width: calc(100% / 3);
     /* DEBUG */
     height: 100%;
@@ -35,11 +35,34 @@
 }
 
 /* barra del profilo */
-.user-profile{
+.bar-up{
     height: 70px;
     background-color: rgb(242, 242, 242);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     /* DEBUG */
     border: 1px solid black;
+}
+
+/* sezione immagine e nome utente */
+.user-profile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.user-profile img{
+    width: 50px;
+    height: 50px;
+}
+
+/* sezione icone */
+.icons a{
+    padding-right: 20px;
+    color: gray;
+    font-size: 20px;
 }
 
 /* sezione notifiche del desktop */
