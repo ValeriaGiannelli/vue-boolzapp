@@ -184,6 +184,7 @@ body{
     height: 100%;
 }
 
+/* nome e ultimo messaggio inviato */
 .selected-contact .contact-profile .info-contact{
     height: 100%;
 } 
@@ -192,8 +193,22 @@ body{
 .chat-container{
     height: calc(100vh - 190px);
     overflow-y: auto;
+    background-image: url(../img/wp4410721-660620800.jpg);
+    padding: 50px 90px;
 
     /* DEBUG */
+    border: 1px solid black;
+}
+
+/* caratteristiche base dei messaggi */
+.message{
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+
+    /* debug */
+    background-color: white;
     border: 1px solid black;
 }
 
