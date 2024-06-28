@@ -5,6 +5,11 @@ const { createApp } = Vue;
 createApp ({
     data(){
         return {
+            userProfile : {
+                name: 'Obi-Wan Kenobi',
+                avatar: './img/avatar-icon-6.jpg'
+            },
+
             contacts: [
                 {
                     name: 'Michele',

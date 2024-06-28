@@ -40,10 +40,10 @@
                     <!-- informazioni profilo gestire con VUE-->
                     <div class="user-profile">
                         <div class="immagine-profilo">
-                            <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                            <img :src="userProfile.avatar" :alt="userProfile.name">
                         </div>
                         
-                        <span>Nome Utente</span>
+                        <span>{{userProfile.name}}</span>
                     </div>
 
                     <!-- icone laterali -->
