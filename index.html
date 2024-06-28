@@ -91,17 +91,17 @@
                 <section id="contacts">
 
                     <!-- singolo contatto da moltiplicare con VUE-->
-                    <div class="single-contact">
+                    <div class="single-contact" v-for="(contact, index) in contacts" :key="index">
 
                         <div class="img-info">
                             <!-- immagine profilo -->
                             <div class="immagine-profilo">
-                                <img src="img/avatar-icon-6.jpg" alt="Nome utente">
+                                <img :src="contact.avatar" alt="contact.name">
                             </div>
 
                             <!-- nome e ultimo messaggio inviato -->
                             <div class="info-contact">
-                                <h3>Nome contatto</h3>
+                                <h3>{{contact.name}}</h3>
                                 <span>Ultimo messaggio inviato</span>                      
                             </div>
                         </div>

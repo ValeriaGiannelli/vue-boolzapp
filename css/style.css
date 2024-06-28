@@ -39,6 +39,7 @@ body{
 /* contenuti dei contatti */
 #left-box{
     width: calc(100% / 3);
+    min-width: 320px;
 }
 
 /* barra del profilo */

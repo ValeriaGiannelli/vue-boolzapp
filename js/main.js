@@ -56,7 +56,7 @@ createApp ({
                     ],
                 },
                 {
-                    name: 'Samuele',
+                    name: 'Signorina Rottermeier ',
                     avatar: './img/avatar-icon-7.jpg',
                     visible: true,
                     messages: [
@@ -112,7 +112,7 @@ createApp ({
                     ],
                 },
                 {
-                    name: 'Claudia',
+                    name: 'Il maggiordomo',
                     avatar: './img/avatar-icon-10.png',
                     visible: true,
                     messages: [
@@ -134,7 +134,7 @@ createApp ({
                     ],
                 },
                 {
-                    name: 'Federico',
+                    name: 'Federico detto Darth Maul',
                     avatar: './img/avatar-icon-9.png',
                     visible: true,
                     messages: [
