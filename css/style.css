@@ -23,6 +23,9 @@
 
 }
 
+
+/******* SEZIONE DI SINISTRA ******/
+
 /* contenuti dei contatti */
 .left-box{
     width: calc(100% / 3);
@@ -69,6 +72,10 @@
     border: 1px solid black;
 }
 
+/***********************************/
+
+
+/******* SEZIONE DI DESTRA ******/
 .right-box{
     width: calc(100% / 3 *2);
     /* DEBUG */
@@ -76,3 +83,30 @@
     border: 1px solid black;
 }
 
+/* utente visualizzato */
+.selected-contact{ /*molto probabile identico al user-profile*/
+    height: 70px;
+    background-color: rgb(242, 242, 242);
+
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+/* contenuto della chat */
+.chat-container{
+    height: calc(100vh - 190px);
+    overflow-y: auto;
+
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+.text-area{
+    height: 70px;
+    background-color: rgb(242, 242, 242);
+
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+/***********************************/
