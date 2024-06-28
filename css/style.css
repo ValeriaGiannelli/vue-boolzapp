@@ -136,34 +136,45 @@ body{
     border-bottom: 1px solid gray;
 }
 
+/* contenitore del contatto senza l'ora */
 .img-info{
     display: flex;
     align-items: center;
 }
 
+/* grandezza contenitore immagine profilo */
 .single-contact .immagine-profilo{
     width: 60px;
     height: 60px;
 }
 
+/* grandezza img profilo */
 .immagine-profilo img{
     width: 100%;
     height: 100%;
 }
 
+/* contenitore del nome e dell'ultimo messaggio */
 .info-contact{
     height: 60px;
     padding-left: 15px;
 }
 
+/* scritta dell'ultimo messaggio */
 .info-contact span{
     color: gray;
 }
 
+/* ora del messaggio */
 .time-msg{
     height: 60px;
     padding-right: 10px;
     color: gray;
+}
+
+/* selezione del singolo contatto */
+.active{
+    background-color:rgb(204, 204, 204);
 }
 
 /***********************************/

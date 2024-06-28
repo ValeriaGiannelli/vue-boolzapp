@@ -91,7 +91,7 @@
                 <section id="contacts">
 
                     <!-- singolo contatto da moltiplicare con VUE-->
-                    <div class="single-contact" v-for="(contact, index) in contacts" :key="index">
+                    <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index">
 
                         <div class="img-info">
                             <!-- immagine profilo -->
