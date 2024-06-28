@@ -136,9 +136,15 @@ body{
     height: 85px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     /* DEBUG */
     border: 1px solid black;
+}
+
+.img-info{
+    display: flex;
+    align-items: center;
 }
 
 .single-contact .immagine-profilo{
@@ -154,6 +160,16 @@ body{
 .info-contact{
     height: 60px;
     padding-left: 15px;
+}
+
+.info-contact span{
+    color: gray;
+}
+
+.time-msg{
+    height: 60px;
+    padding-right: 10px;
+    color: gray;
 }
 
 /***********************************/
