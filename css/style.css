@@ -92,9 +92,27 @@ body{
 .search-bar{
     height: 40px;
     background-color: rgb(242, 242, 242);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
     /* DEBUG */
     border: 1px solid black;
 }
+
+.search-bar .fa-magnifying-glass{
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 15px;
+    color: gray;
+    border: 1px solid gray;
+    border-right: none;
+}
+.search-bar input{
+    width: 100%;
+    padding: 3.5px 5px;
+}
+
 
 /* sezione contatti */
 #contacts{
