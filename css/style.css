@@ -11,8 +11,14 @@ body{
 
 #app{
     height: 100vh;
-    display: flex;
-    align-items: center;
+    position: relative;
+    background-color: #d8dbd5;
+}
+
+.green-row{
+    background-color: #009688;
+    height: 150px;
+    width: 100%;
 }
 
 /* stile container */
@@ -21,6 +27,10 @@ body{
     margin: 0 auto;
     height: calc(100vh - 50px);
     display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
     /* DEBUG */
     background-color: aqua;
