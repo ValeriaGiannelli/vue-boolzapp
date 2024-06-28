@@ -89,34 +89,36 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
 
                     <!-- barra di ricerca -->
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="textSearched" @keyup="searchContact()">
                 </div>
 
                 <!-- sezione contatti -->
                 <section id="contacts">
 
-                    <!-- singolo contatto da moltiplicare con VUE-->
-                    <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index" @click="changeContact(index)">
+                    <div>
+                        <!-- singolo contatto da moltiplicare con VUE-->
+                        <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index" @click="changeContact(index)">
 
-                        <div class="img-info">
-                            <!-- immagine profilo -->
-                            <div class="immagine-profilo">
-                                <img :src="contact.avatar" alt="contact.name">
+                            <div class="img-info">
+                                <!-- immagine profilo -->
+                                <div class="immagine-profilo">
+                                    <img :src="contact.avatar" alt="contact.name">
+                                </div>
+
+                                <!-- nome e ultimo messaggio inviato -->
+                                <div class="info-contact">
+                                    <h3>{{contact.name}}</h3>
+                                    <span>Ultimo messaggio inviato</span>                      
+                                </div>
                             </div>
 
-                            <!-- nome e ultimo messaggio inviato -->
-                            <div class="info-contact">
-                                <h3>{{contact.name}}</h3>
-                                <span>Ultimo messaggio inviato</span>                      
+                            <!-- ora del messaggio -->
+                            <div class="time-msg">
+                                12:00
                             </div>
-                        </div>
 
-                        <!-- ora del messaggio -->
-                         <div class="time-msg">
-                            12:00
-                         </div>
-
-                    </div>                
+                        </div>  
+                    </div>              
                 </section>
 
             </div>
@@ -162,7 +164,7 @@
                 <div class="chat-container">
 
                     <!-- messaggio utente -->
-                    <div class="message" :class="text.status === 'sent' ? 'user-message' : 'contact-message'" v-for="(text, index) in contacts[activeContact].messages" :key="index" @click="whatIDo">
+                    <div class="message" :class="text.status === 'sent' ? 'user-message' : 'contact-message'" v-for="(text, index) in contacts[activeContact].messages" :key="index">
                         <span class="text">{{text.message}}</span>
                         <span class="time">12:00</span>
                     </div>

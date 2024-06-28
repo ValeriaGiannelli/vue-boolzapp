@@ -11,7 +11,7 @@ createApp ({
             },
             activeContact: 0,
             userText: '',
-
+            textSearched:'',
             contacts: [
                 {
                     name: 'Michele',
@@ -182,9 +182,6 @@ createApp ({
         changeContact(indice){
             this.activeContact = indice;
         },
-        whatIDo(){
-            console.log(this.newMessage.date);
-        },
         sendMessage(){
             // creazione dell'oggetto che andrò ad inserire nel mio array di messages
             const newMessage = {
@@ -208,8 +205,25 @@ createApp ({
 
                 this.contacts[this.activeContact].messages.push(response);
 
-            }, 1000)
+            }, 1000)   
+        },
+        searchContact(){
+            // dovrebbe ciclare nell'array dei contatti e guardare il nome
+            for(i = 0; i < this.contacts.length; i++){
 
+                if(!this.contacts[i].name.includes(this.textSearched)){
+                this.contacts[i].visible = false;
+                }
+
+                // console.log(this.contacts[i].name);
+                // console.log(this.textSearched);
+                // console.log(this.contacts[i].name.includes(this.textSearched));
+
+                console.log(this.contacts[i].visible);
+                // console.log(this.contacts.visible);
+                
+            }
+            
             
         }
 
