@@ -91,7 +91,7 @@
                 <section id="contacts">
 
                     <!-- singolo contatto da moltiplicare con VUE-->
-                    <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index">
+                    <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index" @click="changeContact(index)">
 
                         <div class="img-info">
                             <!-- immagine profilo -->
@@ -157,8 +157,8 @@
                 <div class="chat-container">
 
                     <!-- messaggio utente -->
-                    <div class="message user-message">
-                        <span class="text">Inserire testo della persona</span>
+                    <div class="message user-message" v-for="(text, index) in contacts[activeContact].messages" :key="index" @click="whatIDo">
+                        <span class="text">{{text.message}}</span>
                         <span class="time">12:00</span>
                     </div>
 
