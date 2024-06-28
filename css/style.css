@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "Lato", sans-serif;
+}
+
 #app{
     height: 100vh;
     display: flex;
@@ -41,9 +45,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    /* DEBUG */
-    border: 1px solid black;
 }
 
 /* sezione immagine e nome utente */
@@ -68,10 +69,23 @@
 /* sezione notifiche del desktop */
 .desktop-notifications{
     height: 70px;
-    background-color: cornflowerblue;
+    background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
 
-    /* DEBUG */
-    border: 1px solid black;
+.fa-bell-slash{
+    font-size: 20px;
+    background-color: white;
+    color: #8edafc;
+    border-radius: 50%;
+    padding: 12.5px 10px;
+    margin-right: 5px;
+}
+
+.desktop-notifications h5 a{
+    color: gray;
 }
 
 /* sezione barra di ricerca */
