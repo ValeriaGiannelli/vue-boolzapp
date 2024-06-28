@@ -183,18 +183,34 @@ createApp ({
             this.activeContact = indice;
         },
         whatIDo(){
-            console.log(this.contacts[0].messages);
+            console.log(this.newMessage.date);
         },
         sendMessage(){
+            // creazione dell'oggetto che andrò ad inserire nel mio array di messages
             const newMessage = {
-                date: 'inserire data odierna',
+                date: 'data',
                 message: this.userText, 
                 status: 'sent'
             };
 
+            // percorso dove devo inserire l'oggetto messaggio appena creatp
             this.contacts[this.activeContact].messages.push(newMessage);
 
             this.userText = '';
+
+            // dopo un tot di tempo fare comparire un messaggio con ok
+            setTimeout(() => {
+                const response = {
+                    date: 'data',
+                    message: 'ok',
+                    status: 'recieved'
+                };
+
+                this.contacts[this.activeContact].messages.push(response);
+
+            }, 1000)
+
+            
         }
 
     },
