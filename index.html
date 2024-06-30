@@ -94,31 +94,27 @@
 
                 <!-- sezione contatti -->
                 <section id="contacts">
-
-                    <div>
                         <!-- singolo contatto da moltiplicare con VUE-->
-                        <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index" @click="changeContact(index)">
+                        <div class="single-contact" :class="activeContact === index ? 'active' : ''" v-for="(contact, index) in contacts" :key="index" @click="changeContact(index)" v-show="contact.visible">
 
-                            <div class="img-info">
-                                <!-- immagine profilo -->
-                                <div class="immagine-profilo">
-                                    <img :src="contact.avatar" alt="contact.name">
+                                <div class="img-info">
+                                    <!-- immagine profilo -->
+                                    <div class="immagine-profilo">
+                                        <img :src="contact.avatar" alt="contact.name">
+                                    </div>
+    
+                                    <!-- nome e ultimo messaggio inviato -->
+                                    <div class="info-contact">
+                                        <h3>{{contact.name}}</h3>
+                                        <span>Ultimo messaggio inviato</span>                      
+                                    </div>
                                 </div>
-
-                                <!-- nome e ultimo messaggio inviato -->
-                                <div class="info-contact">
-                                    <h3>{{contact.name}}</h3>
-                                    <span>Ultimo messaggio inviato</span>                      
-                                </div>
-                            </div>
-
-                            <!-- ora del messaggio -->
-                            <div class="time-msg">
-                                12:00
-                            </div>
-
-                        </div>  
-                    </div>              
+    
+                                <!-- ora del messaggio -->
+                                <div class="time-msg">
+                                    12:00
+                                </div>                            
+                        </div>          
                 </section>
 
             </div>

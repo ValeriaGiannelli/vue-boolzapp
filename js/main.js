@@ -211,19 +211,20 @@ createApp ({
             // dovrebbe ciclare nell'array dei contatti e guardare il nome
             for(i = 0; i < this.contacts.length; i++){
 
-                if(!this.contacts[i].name.includes(this.textSearched)){
+                if(!this.contacts[i].name.toLowerCase().includes(this.textSearched)){
                 this.contacts[i].visible = false;
+                } else if(this.contacts[i].name.toLowerCase().includes(this.textSearched) || this.textSearched === ''){
+                    this.contacts[i].visible = true;
                 }
 
                 // console.log(this.contacts[i].name);
                 // console.log(this.textSearched);
-                // console.log(this.contacts[i].name.includes(this.textSearched));
+                // console.log(this.contacts[i].name.toLowerCase().includes(this.textSearched));
 
                 console.log(this.contacts[i].visible);
                 // console.log(this.contacts.visible);
                 
-            }
-            
+            };
             
         }
 
