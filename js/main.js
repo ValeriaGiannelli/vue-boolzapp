@@ -174,9 +174,9 @@ createApp ({
                         }
                     ],
                 }
-            ]
-            
-        }
+            ],  
+            // amiciFiltrati: []        
+        }  
     },
     methods: {
         changeContact(indice){
@@ -207,6 +207,7 @@ createApp ({
 
             }, 1000)   
         },
+
         searchContact(){
             // dovrebbe ciclare nell'array dei contatti e guardare il nome
             for(i = 0; i < this.contacts.length; i++){
@@ -221,35 +222,35 @@ createApp ({
                 // console.log(this.textSearched);
                 // console.log(this.contacts[i].name.toLowerCase().includes(this.textSearched));
 
-                console.log(this.contacts[i].visible);
+                // console.log(this.contacts[i].visible);
                 // console.log(this.contacts.visible);
                 
             };
+
+
+            // a differenza di JS la costante la creo direttamente nei data e metto che è un array dove al suo interno finiscono i contatti filtrati - non mi va neanche questo
+            // this.amiciFiltrati = this.contacts.filter((contatto)=> {
+            //     contatto.name.toLowerCase().includes(this.textSearched);
+            //     console.log(this.textSearched);
+            //     console.log(contatto.name.toLowerCase());
+            //     console.log(contatto.name.includes(this.textSearched));
+            // })
+
+
+            // ho provato coi filtri ma non ci riesco
+            // const amiciFiltrati = this.contacts.filter((contatto)=>{
+            //     if(contatto.name.toLowerCase().includes(this.textSearched) || this.textSearched === ''){
+                    
+            //         contatto.visible = true;
+            //         console.log(contatto.visibile);
+            //     }
+            // })
             
         }
 
     },
     mounted(){
-
-        // // esegui per 10 volte l'estrapolazione di una mail casuale
-        // for(i = 0; i < 10; i++){
-        //     // usato axios per prendere il risultato dell'api link
-        //     axios.get("https://flynn.boolean.careers/exercises/api/random/mail").then((risposta) =>{
-
-        //         // response è un oggetto quindi dal console.log vedo quale proprietà mi serve per prendere solo le mail
-        //         const result = risposta.data.response;
-
-        //         // inserisci il risultato nell'array vuoto in Data
-        //         this.mailList.push(result);
-                
-        //         // console.log(risposta);
-        //         // console.log(result);
-        //         console.log(this.mailList.length);
-        //     }).catch(function(error){
-        //         console.log(error.message);
-        //     })
-        // }
-            
+        // this.amiciFiltrati = this.contacts;
         
     }
 
