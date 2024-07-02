@@ -161,7 +161,7 @@
                 <div class="chat-container">
 
                     <!-- messaggio utente -->
-                    <div class="message" :class="text.status === 'sent' ? 'user-message' : 'contact-message'" v-for="(text, index) in contacts[activeContact].messages" :key="index" @click="changeDate">
+                    <div class="message" :class="text.status === 'sent' ? 'user-message' : 'contact-message'" v-for="(text, index) in contacts[activeContact].messages" :key="index">
                         <span class="text">{{text.message}}</span>
                         <span class="time">{{changeDate(text.date)}}</span>
                     </div>

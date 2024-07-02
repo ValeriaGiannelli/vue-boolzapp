@@ -201,7 +201,8 @@ createApp ({
         sendMessage(){
             // creazione dell'oggetto che andrò ad inserire nel mio array di messages
             const newMessage = {
-                date: this.DateTime.now().toFormat("HH ':' mm"),
+                // creo la data nel formato uguale all'array così che la funzione "changeDate" funzioni
+                date: this.DateTime.now().toFormat("dd/MM/yyyy H:mm:ss"),
                 message: this.userText, 
                 status: 'sent'
             };
@@ -215,7 +216,7 @@ createApp ({
             // dopo un secondo compare un messaggio con ok
             setTimeout(() => {
                 const response = {
-                    date: this.DateTime.now().toFormat("HH ':' mm"),
+                    date: this.DateTime.now().toFormat("dd/MM/yyyy H:mm:ss"),
                     message: 'ok',
                     status: 'recieved'
                 };
@@ -247,13 +248,9 @@ createApp ({
             
         },
 
-        showDate(){
-            let DateTime = luxon.DateTime;
-            console.log(this.DateTime.now());
-            console.log(this.DateTime.now().toFormat("HH ':' mm"));
-        },
+        // funzione per farmi ritornare unicamente ora e minuti dall'array di partenza con luxon
         changeDate(data){
-
+            if(data )
             return this.DateTime.fromFormat(data, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")
             // stampa correttamente solo ora e minuti
             // console.log(this.DateTime.fromFormat(this.contacts[7].messages[0].date, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")); 
