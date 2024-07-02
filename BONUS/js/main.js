@@ -262,9 +262,28 @@ createApp ({
             if(this.contacts[i].messages[this.contacts[i].messages.length-1].status === 'received'){
                 return this.contacts[i].messages[this.contacts[i].messages.length-1].message
             } else {
-                return `Ultimo accesso`
+                // falsato, ma funziona
+                return this.contacts[i].messages[this.contacts[i].messages.length-2].message
             }
 
+        },
+
+        // ultimo accesso
+        showLastAccess(i){
+            // ultimo accesso dell'utente
+            let lastAccess = this.contacts[i].messages[this.contacts[i].messages.length-1].date; 
+
+            // ultimo accesso scalato di 2 se l'ultimo messaggio è dell'user
+            let lastAccess2 = this.contacts[i].messages[this.contacts[i].messages.length-2].date;
+
+            // stampa il primo se lo status corrisponde a received (inviato dal contatto)
+            if(this.contacts[i].messages[this.contacts[i].messages.length-1].status === 'received'){
+                // cambia il formato dell'ora senza i secondi
+                return this.DateTime.fromFormat(lastAccess, "dd/MM/yyyy H:mm:ss").toFormat("dd/MM/yyyy HH ':' mm") 
+            } else {
+                // falsato, ma funziona
+                return this.DateTime.fromFormat(lastAccess2, "dd/MM/yyyy H:mm:ss").toFormat("dd/MM/yyyy HH ':' mm") 
+            }
         }
         
 

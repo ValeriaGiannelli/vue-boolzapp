@@ -115,7 +115,7 @@
     
                                 <!-- ora del messaggio -->
                                 <div class="time-msg">
-                                    12:00
+                                    {{showLastAccess(index)}}
                                 </div>                            
                         </div>          
                 </section>
@@ -137,7 +137,7 @@
                         <!-- nome e ultimo accesso da gestire con VUE -->
                         <div class="info-contact">
                             <h3>{{contacts[activeContact].name}}</h3>
-                            <span>Ultimo accesso oggi alle 12:00</span>                      
+                            <span>Ultimo accesso: {{showLastAccess(activeContact)}}</span>                      
                         </div>
                     </div>
 
