@@ -20,7 +20,7 @@ createApp ({
             // var in v-model per la ricerca contatti
             textSearched:'',
 
-            // data
+            // data con luxon
             DateTime: luxon.DateTime,
 
             // array dei contatti
@@ -218,7 +218,7 @@ createApp ({
                 const response = {
                     date: this.DateTime.now().toFormat("dd/MM/yyyy H:mm:ss"),
                     message: 'ok',
-                    status: 'recieved'
+                    status: 'received'
                 };
 
                 // il messaggio di risposta verrà inserito nell'array dei messaggi
@@ -250,11 +250,21 @@ createApp ({
 
         // funzione per farmi ritornare unicamente ora e minuti dall'array di partenza con luxon
         changeDate(data){
-            if(data )
             return this.DateTime.fromFormat(data, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")
             // stampa correttamente solo ora e minuti
             // console.log(this.DateTime.fromFormat(this.contacts[7].messages[0].date, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")); 
             // toFormat("HH ':' mm");
+        },
+
+        showLastMessage(i){  
+            // console.log(this.contacts[i].messages[this.contacts[i].messages.length-1].message);
+            // console.log(this.contacts[i].messages[this.contacts[i].messages.length-1].status);
+            if(this.contacts[i].messages[this.contacts[i].messages.length-1].status === 'received'){
+                return this.contacts[i].messages[this.contacts[i].messages.length-1].message
+            } else {
+                return `Ultimo accesso`
+            }
+
         }
         
 
