@@ -1,5 +1,5 @@
 // estrapolo il metodo del framework che ci permette di creare app Vue
-const { createApp } = Vue;
+const { createApp } = Vue;      
 
 // creo l'istanza di un'app VUE e la collogo all'ID contenitore 
 createApp ({
@@ -19,6 +19,9 @@ createApp ({
 
             // var in v-model per la ricerca contatti
             textSearched:'',
+
+            // data
+            DateTime: luxon.DateTime,
 
             // array dei contatti
             contacts: [
@@ -183,7 +186,8 @@ createApp ({
                         }
                     ],
                 }
-            ],       
+            ],  
+
         }  
     },
     methods: {
@@ -197,7 +201,7 @@ createApp ({
         sendMessage(){
             // creazione dell'oggetto che andrò ad inserire nel mio array di messages
             const newMessage = {
-                date: 'data',
+                date: this.DateTime.now().toFormat("HH ':' mm"),
                 message: this.userText, 
                 status: 'sent'
             };
@@ -211,7 +215,7 @@ createApp ({
             // dopo un secondo compare un messaggio con ok
             setTimeout(() => {
                 const response = {
-                    date: 'data',
+                    date: this.DateTime.now().toFormat("HH ':' mm"),
                     message: 'ok',
                     status: 'recieved'
                 };
@@ -242,6 +246,12 @@ createApp ({
             };
             
         },
+
+        showDate(){
+            let DateTime = luxon.DateTime;
+            console.log(this.DateTime.now());
+            console.log(this.DateTime.now().toFormat("HH ':' mm"));
+        }
         
 
     },
