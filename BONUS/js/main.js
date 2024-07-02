@@ -170,7 +170,7 @@ createApp ({
                     visible: true,
                     messages: [
                         {
-                            date: '10/01/2020 15:30:55',
+                            date: '10/01/2020 15:40:07',
                             message: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received'
                         },
@@ -251,6 +251,13 @@ createApp ({
             let DateTime = luxon.DateTime;
             console.log(this.DateTime.now());
             console.log(this.DateTime.now().toFormat("HH ':' mm"));
+        },
+        changeDate(data){
+
+            return this.DateTime.fromFormat(data, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")
+            // stampa correttamente solo ora e minuti
+            // console.log(this.DateTime.fromFormat(this.contacts[7].messages[0].date, "dd/MM/yyyy H:mm:ss").toFormat("HH ':' mm")); 
+            // toFormat("HH ':' mm");
         }
         
 

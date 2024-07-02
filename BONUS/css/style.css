@@ -236,10 +236,16 @@ body{
 }
 
 /* caratteristiche messaggi */
+.message .text{
+    display: block;
+    width: 200px;
+}
 .message .time{
     font-size: 9px;
     color: gray;
     align-self: end;
+    display: block;
+    width: 30px;
 }
 
 /* caratteristica messaggio utente */
