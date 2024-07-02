@@ -5,13 +5,22 @@ const { createApp } = Vue;
 createApp ({
     data(){
         return {
+            // oggetto per profilo utente
             userProfile: {
                 name: 'Obi-Wan Kenobi',
                 avatar: './img/avatar-icon-6.jpg'
             },
+
+            // variabile per selezionare chat attiva
             activeContact: 0,
+
+            // var in v-model per il testo utente
             userText: '',
+
+            // var in v-model per la ricerca contatti
             textSearched:'',
+
+            // array dei contatti
             contacts: [
                 {
                     name: 'Michele',
@@ -174,14 +183,17 @@ createApp ({
                         }
                     ],
                 }
-            ],  
-            // amiciFiltrati: []        
+            ],       
         }  
     },
     methods: {
+
+        // cambio contatto mi visualizza la chat con lo stesso indice del contatto selezionato
         changeContact(indice){
             this.activeContact = indice;
         },
+
+        // funzione per mandare il messaggio
         sendMessage(){
             // creazione dell'oggetto che andrò ad inserire nel mio array di messages
             const newMessage = {
@@ -190,12 +202,13 @@ createApp ({
                 status: 'sent'
             };
 
-            // percorso dove devo inserire l'oggetto messaggio appena creatp
+            // percorso dove devo inserire l'oggetto messaggio appena creato
             this.contacts[this.activeContact].messages.push(newMessage);
 
+            // input torna vuoto
             this.userText = '';
 
-            // dopo un tot di tempo fare comparire un messaggio con ok
+            // dopo un secondo compare un messaggio con ok
             setTimeout(() => {
                 const response = {
                     date: 'data',
@@ -203,18 +216,19 @@ createApp ({
                     status: 'recieved'
                 };
 
+                // il messaggio di risposta verrà inserito nell'array dei messaggi
                 this.contacts[this.activeContact].messages.push(response);
 
             }, 1000)   
         },
 
         searchContact(){
-            // dovrebbe ciclare nell'array dei contatti e guardare il nome
+            // Cicla nell'array dei contatti e guardare se il nome contiene il testo cercato
             for(i = 0; i < this.contacts.length; i++){
-
+                // se il nome NON contiene la stringra scritta -> il visible corrispondente dinventa false
                 if(!this.contacts[i].name.toLowerCase().includes(this.textSearched)){
                 this.contacts[i].visible = false;
-                } else if(this.contacts[i].name.toLowerCase().includes(this.textSearched) || this.textSearched === ''){
+                } else if(this.contacts[i].name.toLowerCase().includes(this.textSearched) || this.textSearched === ''){ //se invece il nome contiene la stringa o il campo di input è vuoto -> visible diventa true
                     this.contacts[i].visible = true;
                 }
 
@@ -226,31 +240,12 @@ createApp ({
                 // console.log(this.contacts.visible);
                 
             };
-
-
-            // a differenza di JS la costante la creo direttamente nei data e metto che è un array dove al suo interno finiscono i contatti filtrati - non mi va neanche questo
-            // this.amiciFiltrati = this.contacts.filter((contatto)=> {
-            //     contatto.name.toLowerCase().includes(this.textSearched);
-            //     console.log(this.textSearched);
-            //     console.log(contatto.name.toLowerCase());
-            //     console.log(contatto.name.includes(this.textSearched));
-            // })
-
-
-            // ho provato coi filtri ma non ci riesco
-            // const amiciFiltrati = this.contacts.filter((contatto)=>{
-            //     if(contatto.name.toLowerCase().includes(this.textSearched) || this.textSearched === ''){
-                    
-            //         contatto.visible = true;
-            //         console.log(contatto.visibile);
-            //     }
-            // })
             
-        }
+        },
+        
 
     },
     mounted(){
-        // this.amiciFiltrati = this.contacts;
         
     }
 

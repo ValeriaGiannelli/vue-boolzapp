@@ -27,6 +27,7 @@
     <!-- mio css -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <!-- id per unirlo a Vue -->
     <div id="app">
@@ -44,10 +45,12 @@
 
                     <!-- informazioni profilo gestire con VUE-->
                     <div class="user-profile">
+                        <!-- immagine del profilo -->
                         <div class="immagine-profilo">
                             <img :src="userProfile.avatar" :alt="userProfile.name">
                         </div>
                         
+                        <!-- nome dell'utente -->
                         <span>{{userProfile.name}}</span>
                     </div>
 
@@ -71,8 +74,8 @@
                 <div class="desktop-notifications">
 
                     <!-- simbolo notifiche -->
-
                     <i class="fa-solid fa-bell-slash"></i>
+
                     <!-- informazioni -->
                     <div>
                         <span>Ricevi notifiche di nuovi messaggi</span>
@@ -131,7 +134,7 @@
                             <img :src="contacts[activeContact].avatar" :alt="contacts[activeContact].name">
                         </div>
                         
-                        <!-- nome e ultimo messaggio inviato gestire con VUE -->
+                        <!-- nome e ultimo accesso da gestire con VUE -->
                         <div class="info-contact">
                             <h3>{{contacts[activeContact].name}}</h3>
                             <span>Ultimo accesso oggi alle 12:00</span>                      
@@ -174,6 +177,7 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </a>
                     
+                    <!-- input dove la persona scriverà il messaggio -->
                     <input type="text" placeholder="Scrivi un messaggio" v-model="userText" @keyup.enter="sendMessage()">
 
                     <a href="#">
