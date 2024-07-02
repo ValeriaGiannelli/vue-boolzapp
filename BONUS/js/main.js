@@ -263,7 +263,7 @@ createApp ({
                 return this.contacts[i].messages[this.contacts[i].messages.length-1].message
             } else {
                 // falsato, ma funziona
-                return this.contacts[i].messages[this.contacts[i].messages.length-2].message
+                return `Inviato: ${this.contacts[i].messages[this.contacts[i].messages.length-1].message}`
             }
 
         },
