@@ -175,6 +175,8 @@ body{
     height: 60px;
     padding-right: 10px;
     color: gray;
+    width: 155px;
+    text-align: end;
 }
 
 /* selezione del singolo contatto */
